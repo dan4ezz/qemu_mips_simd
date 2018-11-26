@@ -1,0 +1,313 @@
+\documentclass[14pt,a4paper,oneside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\linespread{1.1}
+\usepackage{indentfirst}
+
+\pagestyle{headings}
+\makeatletter
+\renewcommand{\@evenhead}{\hfil \thepage\ \hfil}
+\renewcommand{\@oddhead}{\hfil \thepage\ \hfil}
+\renewcommand\thesection{\@arabic\c@section.}
+\renewcommand\thesubsection{\thesection\@arabic\c@subsection.}
+\renewcommand\thesubsubsection{\thesubsection\@arabic\c@subsubsection.}
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\normalsize}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize}}
+\makeatother
+
+\usepackage{xspace}
+\newcommand{\vrio}{\texttt{vrio}\xspace}
+
+\begin{document}
+\centerline{КОМПЛЕКС ПРОГРАММ}
+\centerline{<<ВИРТУАЛЬНАЯ КОММУНИКАЦИОННАЯ СРЕДА VRIO>>}
+\vskip 3mm
+\centerline{Технические требования}
+\vskip 4mm
+
+%\setcounter{page}{1}
+
+\section{ВВЕДЕНИЕ}
+Настоящие технические требования распространяются на разработку комплекса программ <<Виртуальная коммуникационная среда VRIO>> (далее, \vrio).
+
+\section{ОСНОВАНИЕ ДЛЯ РАЗРАБОТКИ}
+Разработка проводится на основании планов ОАВМ НИИСИ РАН.
+
+\section{НАЗНАЧЕНИЕ РАЗРАБОТКИ}
+Основное назначение программы \vrio заключается в предоставлении пользователю средства для имитационного моделирования работы коммуникационной среды RapidIO; комплекс программ должен
+обеспечивать:
+\begin{itemize}
+\item запуск нескольких экземпляров эмулятора \texttt{qemu}, имеющих в своём составе модель
+контроллера RapidIO СБИС 1890ВМ8Я и их объединение в единую коммуникационную среду RapidIO;
+\item запуск на экземплярах эмулятора оригинального (то есть, работающих на аппаратных
+реализациях 1890ВМ8Я и сети RapidIO) встроенного ПО (PMON2000) и ПО обработки сигналов
+на базе БЦОС (под управлением ядра linux).
+\end{itemize}
+
+\section{ИСХОДНЫЕ ДАННЫЕ, ЦЕЛЬ И РЕШАЕМЫЕ ЗАДАЧИ}
+\subsection{Исходные данные}
+
+Исходными данными для разработки являются:
+\begin{itemize}
+\item описание функционального и эксплуатационного назначения;
+\item документы <<RapidIO Interconnect Specification, Rev. 1.3, 06/2005>>, а именно:
+  \begin{itemize}
+  \item Part 1: Input/Output Logical Specification;
+  \item Part 2: Message Passing Logical Specification;
+  \item Part 3: Common Transport;
+  \item Part 4: Physical Layer 8/16 LP-LVDS Specification;
+  \item Part 6: 1x/4x LP-Serial Physical Layer Specification.
+  \end{itemize}
+
+\item документ <<Контроллер RapidIO СБИС 1890ВМ8Я>>;
+\item частино реализованный комплекс программ \vrio в ветке \texttt{antony.20171107.vrio} в git-репозитории \texttt{ssh://git@duna.niisi.ru/qemu/qemu.git}.
+\item исходные тексты драйверов оконечного устройства RapidIO СБИС 1890ВМ8Я для ПО PMON2000 и ядра linux;
+\item исходные тексты оконечного устройства \vrio для qemu-v2.8.0-rc2;
+\item реализация коммутатора vrio \texttt{vrio\_switch.py};
+\item описание форматов пакетов vrio.
+\end{itemize}
+
+\subsection{Цель работы}
+
+Целью работы является комплекс программ \vrio: эмулятор СБИС 1890ВМ8Я,
+в состав которого входит модель оконечного устройства RapidIO;
+модель коммутатора RapidIO; методические указания по использованию
+комплекса программ.
+
+\section{ТЕХНИЧЕСКИЕ ТРЕБОВАНИЯ}
+
+\subsection{Принцип работы \vrio}
+
+Виртуальная коммуникационная среда RapidIO (\vrio) обеспечивает
+передачу данных между виртуальными оконечными устройствами \vrio
+пакетов, с полями, аналогичными полям пакетов реальной коммуникационной
+сети RapidIO через TCP-соединения.
+
+Для передачи пакетов используются коммутаторы \vrio и каналы \vrio.
+Каналы \vrio используются для соединения портов оконечных портов
+и коммутаторов \vrio.
+
+\subsubsection{Реализация оконечного устройства \vrio}
+Оконечное устройство \vrio --- программный модуль для эмулятора qemu.
+С точки зрения ПО, исполняющегося на эмуляторе, оконечное устройство
+\vrio является блоком управляющих регистров в адресном пространстве
+процессора, а также линия запроса на прерывание.
+С точки зрения инструментальной ЭВМ, на которой исполняется
+qemu, порт \vrio представляется как TCP-сервер, который ожидает
+подключения от канала \vrio.
+
+Оконечное устройство на базе программной модели контроллера RapidIO
+СБИС 1890ВМ6Я должно поддерживать работу с операциями MAINTENANCE и MESSAGE.
+
+%Оконечное устройство \vrio
+%Если подключения нет, то в соответствующем
+%статусном регистре Port n Error and Status CSR блока физического уровня
+%оконечного устройства значение поля Port Error равно 1,
+%а после подключения канала \vrio Port OK равно 1.
+
+%Оконечное устройство отвечает на запросы MAINTENANCE READ.
+
+
+\subsubsection{Реализация канала \vrio}
+
+Реализация канала \vrio производится самыми простыми средствами,
+вот, например, реализация на shell при помощи netcat:
+\begin{verbatim}
+PORT1=2021
+PORT2=3001
+
+FIFO1=01
+FIFO2=10
+
+rm -f $FIFO1 $FIFO2
+mkfifo $FIFO1
+mkfifo $FIFO2
+cat < $FIFO2 > $FIFO1 &
+nc6 --disable-nagle localhost $PORT1 < $FIFO1 |
+    nc6 --disable-nagle localhost $PORT2 > $FIFO2
+\end{verbatim}
+
+\subsubsection{Реализация коммутатора \vrio}
+
+Коммутатор \vrio уже реализован: \verb#vrio_switch.py#, вопрос о его доработке
+или замене решается по итогам реализации поддержки операций MESSAGE.
+
+\subsection{Требования к информационной и программной совместимости}
+
+\subsubsection{Комплекс программ \vrio должен работать под управлением ОС Debian Linux 9.0 или новее.}
+
+\subsubsection{Файлы с исходными текстами комплекса программ \vrio должны в git-репозитории \texttt{ssh://git@duna.niisi.ru/qemu/qemu.git}.}
+
+\subsubsection{Исходными тексты модуля для qemu должны быть оформлены
+в соответствиями требованиям оформления кода qemu; в исходных текстах
+модуля qemu должны использоваться макроопределения для контроллера
+RapidIO 1890ВМ6Я из состава исходных текстов ядра linux.}
+
+\subsection{Требования к программной документации}
+\subsubsection{Разрабатываемые программные модули должны быть самодокументированы, то есть тексты программ должны содержать все необходимые комментарии.}
+
+\subsubsection{В состав сопроводительной документации должны входить:
+методические указания по работе с комплексом программ.}
+
+\eject
+
+\section{СТАДИИ И ЭТАПЫ РАЗРАБОТКИ}
+
+Часть функциональности \vrio уже реализована:
+\begin{itemize}
+\item коммутатор \vrio (\verb#vrio_switch.py#);
+\item блок работы с транзакциями MAINTENANCE для модели
+контроллера RapidIO СБИС 1890ВМ8Я;
+\item сценарии запуска двух эмуляторов qemu и коммутатора \vrio для
+проверки функционирования транзакций MAINTENANCE.
+\end{itemize}
+
+На первом этапе требуется реализовать следующую функциональность \vrio:
+\begin{itemize}
+\item реализовать поддержку операций MESSAGE;
+\item методику запуска системы из двух экземпляров qemu, коммутатора \vrio,
+необходимых каналов \vrio и проверку работы команд PMON2000 \texttt{link}
+и \texttt{riosend}.
+\end{itemize}
+
+На втором этапе потребуется доработка \vrio в части операций MESSAGE
+для реализации поддержки передачи данных при помощи стека RapidIO для ОС Linux
+разработки НИИСИ РАН. Задание для второго этапа не уточняется в данной версии
+технических требований.
+
+% \begin{center}
+% \noindent\hfill Таблица 1. Стадии и этапы разработки
+% \small
+% \noindent\begin{tabular}{|c|p{44mm}|p{20mm}|p{35mm}|}
+% \hline
+% No. & Наименование & Срок исполнения & Результат \\
+% \hline
+% 1 & & & \\
+% \hline
+% 2 & & & \\
+% \hline
+% 3 & & & \\
+% \hline
+% \end{tabular}
+% \end{center}
+
+\section{ПРИМЕЧАНИЕ}
+В процессе выполнения работы возможно изменение требований ТЗ установленным порядком.
+
+\eject
+
+\section*{ПРИЛОЖЕНИЕ: формат пакета сети \vrio}
+
+Аналогично реальной коммуникационной среде RapidIO, пакеты виртуальной
+сети \vrio разделены на поля, относящиеся к логическому,
+транспортному и физическому уровню.
+
+Поля физического и транспортного уровней формируют заголовок,
+присущий всем пакетам \vrio.
+
+Поля заголовка пакета \vrio и их размеры (в байтах):
+
+\begin{verbatim}
++--------+--------+----------+------+-----+-------+---------------+
+| format | transp | reserved | dest | src | lllen | logical layer |
+|  type  |  type  |          |  ID  |  ID |       |     fields    |
++--------+--------+----------+------+-----+-------+---------------+
+|   1    |   1    |    2     |  2   |  2  |   4   |     lllen     |
++--------+--------+----------+------+-----+-------+---------------+
+\end{verbatim}
+
+\begin{itemize}
+\item format type --- тип пакета (1 байт). Краткое обозначение ftype;
+\item transp type --- тип транспортного уровня (1 байт), по умолчанию здесь стоит 0. Краткое обозначение ttype; (Примечание: реальной системе 2-битное поле tt определяет тип используемой
+адресации транспортного уровня (8- или 16-разрядные поля destination ID и source ID);
+\item reserved --- зарезервированное поле (2 байта), по умолчанию 0;
+\item dest ID --- адрес получателя пакета (2 байта). Краткое обозначение dId;
+\item src ID --- адрес отправителя пакета (2 байта). Краткое обозначение sId;
+\item lllen --- длина следующих полей логического уровня (4 байта);
+\item logical layer fields --- поля логического уровня, их тип и количество
+определяется типом операции на логическом уровне.
+\end{itemize}
+
+\eject
+
+\subsection*{MAINTENANCE READ REQUEST}
+
+\begin{verbatim}
++-------+-------+--------+-----+--------+-----+
+|  hop  | ttype | rdsize | TID | offset | pad |
+| count |       |        |     |        |     |
++-------+-------+--------+-----+--------+-----+
+|   1   |   1   |   1    |  1  |   4    |  4  |
++-------+-------+--------+-----+--------+-----+
+\end{verbatim}
+
+\subsection*{MAINTENANCE READ RESPONSE}
+
+\begin{verbatim}
++-------+-------+--------+-----+--------+-----+
+|  hop  | ttype | status | TID |  data  | pad |
+| count |       |        |     |        |     |
++-------+-------+--------+-----+--------+-----+
+|   1   |   1   |   1    |  1  |   4    |  4  |
++-------+-------+--------+-----+--------+-----+
+\end{verbatim}
+
+\subsection*{MAINTENANCE WRITE REQUEST}
+
+\begin{verbatim}
++-------+-------+--------+-----+--------+-----+
+|  hop  | ttype | wrsize | TID | offset | data|
+| count |       |        |     |        |     |
++-------+-------+--------+-----+--------+-----+
+|   1   |   1   |   1    |  1  |   4    |  4  |
++-------+-------+--------+-----+--------+-----+
+\end{verbatim}
+
+\subsection*{MAINTENANCE WRITE RESPONSE}
+
+\begin{verbatim}
++-------+-------+--------+-----+--------+-----+
+|  hop  | ttype | status | TID |  pad   | pad |
+| count |       |        |     |        |     |
++-------+-------+--------+-----+--------+-----+
+|   1   |   1   |   1    |  1  |   4    |  4  |
++-------+-------+--------+-----+--------+-----+
+\end{verbatim}
+
+\eject
+
+\subsection*{MESSAGE}
+
+\begin{verbatim}
++-------+-------+ - - - - - +
+| letter| mbox  |  D A T A  |
+|       |       |           |
++-------+-------+ - - - - - +
+|   1   |   1   |    H Z    |
++-------+-------+ - - - - - +
+\end{verbatim}
+
+\subsection*{RESPONSE}
+
+\begin{verbatim}
++-------+--------+-------+-------+
+| ttype | status | letter| mbox  |
+|       |        |       |       |
++-------+--------+-------+-------+
+|   1   |   1    |   1   |   1   |
++-------+--------+-------+-------+
+\end{verbatim}
+
+\end{document}
+
+\endinput

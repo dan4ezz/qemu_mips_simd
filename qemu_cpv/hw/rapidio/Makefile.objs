@@ -1,0 +1,1 @@
+common-obj-$(CONFIG_SC64_RIO) += sc64-rio.o

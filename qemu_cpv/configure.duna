@@ -1,0 +1,20 @@
+cap="no" ./configure \
+    --extra-cflags="-Wno-maybe-uninitialized" \
+    --audio-drv-list="" \
+    --disable-attr \
+    --disable-blobs \
+    --disable-bluez \
+    --disable-brlapi \
+    --disable-curl \
+    --disable-curses \
+    --disable-docs \
+    --extra-cflags="-g" \
+    --disable-kvm \
+    --disable-spice \
+    --disable-vde \
+    --disable-vnc-sasl \
+    --disable-werror \
+    --disable-stack-protector \
+    --target-list=mips64-softmmu,mips64el-softmmu
+
+#find -iname 'config-target.h'

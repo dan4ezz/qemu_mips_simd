@@ -1,0 +1,12 @@
+obj-y += mips_r4k.o mips_malta.o mips_mipssim.o
+obj-y += addr.o mips_int.o
+obj-$(CONFIG_JAZZ) += mips_jazz.o
+obj-$(CONFIG_FULONG) += mips_fulong2e.o
+obj-y += gt64xxx_pci.o
+obj-$(CONFIG_MIPS_CPS) += cps.o
+obj-$(CONFIG_MIPS_BOSTON) += boston.o
+obj-$(CONFIG_DUNA) += sc64-sccr.o
+obj-$(CONFIG_DUNA) += sc64-mpu.o
+obj-$(CONFIG_DUNA) += sc64-devicebus.o
+obj-$(CONFIG_DUNA) += mips_duna.o
+obj-$(CONFIG_DUNA) += cp2.o
