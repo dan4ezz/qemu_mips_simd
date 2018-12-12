@@ -1408,6 +1408,20 @@ static TCGv_i32 fpu_fcr0, fpu_fcr31;
 static TCGv_i64 fpu_f64[32];
 static TCGv_i64 msa_wr_d[64];
 
+
+void log_ldst_instruction(const char* instr_name, int base, int16_t offset)
+{
+#ifdef USUAL_OPCS
+    FILE* log_file = fopen("log_msa", "a");
+    if(log_file != 0)
+    	//согласно информации из файла tcg.h TCGv=target_ulong,
+    	//тк мы работаем с mips64, то это будет uint64_t
+    	fprintf(log_file, "%s    0x%lx\n", instr_name, (uint64_t)cpu_gpr[base]+offset);
+    fclose(log_file);
+#endif
+}
+
+
 #include "exec/gen-icount.h"
 
 #define gen_helper_0e0i(name, arg) do {                           \
@@ -2186,25 +2200,25 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
     switch (opc) {
 #if defined(TARGET_MIPS64)
     case OPC_LWU:
-        log_instruction("LWU"); //Запись инструкции в лог-файл
+        log_ldst_instruction("LWU", base, offset); //Запись инструкции в лог-файл
         tcg_gen_qemu_ld_tl(t0, t0, mem_idx, MO_TEUL |
                            ctx->default_tcg_memop_mask);
         gen_store_gpr(t0, rt);
         break;
     case OPC_LD:
-        log_instruction("LD"); //Запись инструкции в лог-файл
+        log_ldst_instruction("LD", base, offset); //Запись инструкции в лог-файл
         tcg_gen_qemu_ld_tl(t0, t0, mem_idx, MO_TEQ |
                            ctx->default_tcg_memop_mask);
         gen_store_gpr(t0, rt);
         break;
     case OPC_LLD:
     case R6_OPC_LLD:
-        log_instruction("LLD"); //Запись инструкции в лог-файл
+    	log_ldst_instruction("LLD", base, offset); //Запись инструкции в лог-файл
         op_ld_lld(t0, t0, mem_idx, ctx);
         gen_store_gpr(t0, rt);
         break;
     case OPC_LDL:
-        log_instruction("LDL"); //Запись инструкции в лог-файл
+    	log_ldst_instruction("LDL", base, offset); //Запись инструкции в лог-файл
         t1 = tcg_temp_new();
         /* Do a byte access to possibly trigger a page
            fault with the unaligned address.  */
@@ -2227,7 +2241,7 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         gen_store_gpr(t0, rt);
         break;
     case OPC_LDR:
-        log_instruction("LDR"); //Запись инструкции в лог-файл
+    	log_ldst_instruction("LDR", base, offset); //Запись инструкции в лог-файл
         t1 = tcg_temp_new();
         /* Do a byte access to possibly trigger a page
            fault with the unaligned address.  */
@@ -2251,7 +2265,7 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         gen_store_gpr(t0, rt);
         break;
     case OPC_LDPC:
-        log_instruction("LDPC"); //Запись инструкции в лог-файл
+    	log_ldst_instruction("LDPC", base, offset); //Запись инструкции в лог-файл
         t1 = tcg_const_tl(pc_relative_pc(ctx));
         gen_op_addr_add(ctx, t0, t0, t1);
         tcg_temp_free(t1);
@@ -2260,7 +2274,7 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         break;
 #endif
     case OPC_LWPC:
-        log_instruction("LWPC"); //Запись инструкции в лог-файл
+    	log_ldst_instruction("LWPC", base, offset); //Запись инструкции в лог-файл
         t1 = tcg_const_tl(pc_relative_pc(ctx));
         gen_op_addr_add(ctx, t0, t0, t1);
         tcg_temp_free(t1);
@@ -2272,9 +2286,9 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         /* fall through */
     case OPC_LW:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("LWE"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LWE", base, offset); //Запись инструкции в лог-файл
     	else
-            log_instruction("LW"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LW", base, offset); //Запись инструкции в лог-файл
         tcg_gen_qemu_ld_tl(t0, t0, mem_idx, MO_TESL |
                            ctx->default_tcg_memop_mask);
         gen_store_gpr(t0, rt);
@@ -2284,9 +2298,9 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         /* fall through */
     case OPC_LH:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("LHE"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LHE", base, offset); //Запись инструкции в лог-файл
     	else
-            log_instruction("LH"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LH", base, offset); //Запись инструкции в лог-файл
         tcg_gen_qemu_ld_tl(t0, t0, mem_idx, MO_TESW |
                            ctx->default_tcg_memop_mask);
         gen_store_gpr(t0, rt);
@@ -2296,9 +2310,9 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         /* fall through */
     case OPC_LHU:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("LHUE"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LHUE", base, offset);
     	else
-            log_instruction("LHU"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LHU", base, offset); //Запись инструкции в лог-файл
         tcg_gen_qemu_ld_tl(t0, t0, mem_idx, MO_TEUW |
                            ctx->default_tcg_memop_mask);
         gen_store_gpr(t0, rt);
@@ -2308,9 +2322,9 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         /* fall through */
     case OPC_LB:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("LBE"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LBE", base, offset);
     	else
-            log_instruction("LB"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LB", base, offset);
         tcg_gen_qemu_ld_tl(t0, t0, mem_idx, MO_SB);
         gen_store_gpr(t0, rt);
         break;
@@ -2319,9 +2333,9 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         /* fall through */
     case OPC_LBU:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("LBUE"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LBUE", base, offset);
     	else
-            log_instruction("LBU"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LBU", base, offset);
         tcg_gen_qemu_ld_tl(t0, t0, mem_idx, MO_UB);
         gen_store_gpr(t0, rt);
         break;
@@ -2330,9 +2344,9 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         /* fall through */
     case OPC_LWL:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("LWLE"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LWLE", base, offset);
     	else
-            log_instruction("LWL"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LWL", base, offset);
         t1 = tcg_temp_new();
         /* Do a byte access to possibly trigger a page
            fault with the unaligned address.  */
@@ -2360,9 +2374,9 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         /* fall through */
     case OPC_LWR:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("LWRE"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LWRE", base, offset);
     	else
-            log_instruction("LWR"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LWR", base, offset);
         t1 = tcg_temp_new();
         /* Do a byte access to possibly trigger a page
            fault with the unaligned address.  */
@@ -2392,9 +2406,9 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
     case OPC_LL:
     case R6_OPC_LL:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("LLE"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LLE", base, offset);
     	else
-            log_instruction("LL"); //Запись инструкции в лог-файл
+    		log_ldst_instruction("LL", base, offset);
         op_ld_ll(t0, t0, mem_idx, ctx);
         gen_store_gpr(t0, rt);
         break;
@@ -2416,16 +2430,16 @@ static void gen_st (DisasContext *ctx, uint32_t opc, int rt,
     switch (opc) {
 #if defined(TARGET_MIPS64)
     case OPC_SD:
-        log_instruction("SD"); //Запись инструкции в лог-файл
+    	log_ldst_instruction("SD", base, offset);
         tcg_gen_qemu_st_tl(t1, t0, mem_idx, MO_TEQ |
                            ctx->default_tcg_memop_mask);
         break;
     case OPC_SDL:
-        log_instruction("SDL"); //Запись инструкции в лог-файл
+    	log_ldst_instruction("SDL", base, offset);
         gen_helper_0e2i(sdl, t1, t0, mem_idx);
         break;
     case OPC_SDR:
-        log_instruction("SDR"); //Запись инструкции в лог-файл
+    	log_ldst_instruction("SDR", base, offset);
         gen_helper_0e2i(sdr, t1, t0, mem_idx);
         break;
 #endif
@@ -2434,9 +2448,9 @@ static void gen_st (DisasContext *ctx, uint32_t opc, int rt,
         /* fall through */
     case OPC_SW:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("SWE"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SWE", base, offset);
     	else
-            log_instruction("SW"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SW", base, offset);
         tcg_gen_qemu_st_tl(t1, t0, mem_idx, MO_TEUL |
                            ctx->default_tcg_memop_mask);
         break;
@@ -2445,9 +2459,9 @@ static void gen_st (DisasContext *ctx, uint32_t opc, int rt,
         /* fall through */
     case OPC_SH:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("SHE"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SHE", base, offset);
     	else
-            log_instruction("SH"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SH", base, offset);
         tcg_gen_qemu_st_tl(t1, t0, mem_idx, MO_TEUW |
                            ctx->default_tcg_memop_mask);
         break;
@@ -2456,9 +2470,9 @@ static void gen_st (DisasContext *ctx, uint32_t opc, int rt,
         /* fall through */
     case OPC_SB:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("SBE"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SBE", base, offset);
     	else
-            log_instruction("SB"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SB", base, offset);
         tcg_gen_qemu_st_tl(t1, t0, mem_idx, MO_8);
         break;
     case OPC_SWLE:
@@ -2466,9 +2480,9 @@ static void gen_st (DisasContext *ctx, uint32_t opc, int rt,
         /* fall through */
     case OPC_SWL:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("SWLE"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SWLE", base, offset);
     	else
-            log_instruction("SWL"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SWL", base, offset);
         gen_helper_0e2i(swl, t1, t0, mem_idx);
         break;
     case OPC_SWRE:
@@ -2476,9 +2490,9 @@ static void gen_st (DisasContext *ctx, uint32_t opc, int rt,
         /* fall through */
     case OPC_SWR:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("SWRE"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SWRE", base, offset);
     	else
-            log_instruction("SWR"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SWR", base, offset);
         gen_helper_0e2i(swr, t1, t0, mem_idx);
         break;
     }
@@ -2508,7 +2522,7 @@ static void gen_st_cond (DisasContext *ctx, uint32_t opc, int rt,
 #if defined(TARGET_MIPS64)
     case OPC_SCD:
     case R6_OPC_SCD:
-        log_instruction("SCD"); //Запись инструкции в лог-файл
+    	log_ldst_instruction("SCD", base, offset);
         op_st_scd(t1, t0, rt, mem_idx, ctx);
         break;
 #endif
@@ -2518,9 +2532,9 @@ static void gen_st_cond (DisasContext *ctx, uint32_t opc, int rt,
     case OPC_SC:
     case R6_OPC_SC:
     	if(mem_idx == MIPS_HFLAG_UM)
-            log_instruction("SCE"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SCE", base, offset);
     	else
-            log_instruction("SC"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SC", base, offset);
         op_st_sc(t1, t0, rt, mem_idx, ctx);
         break;
     }
@@ -2541,7 +2555,7 @@ static void gen_flt_ldst (DisasContext *ctx, uint32_t opc, int ft,
     switch (opc) {
     case OPC_LWC1:
         {
-            log_instruction("LWC1"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("LWC1", base, offset);
             TCGv_i32 fp0 = tcg_temp_new_i32();
             tcg_gen_qemu_ld_i32(fp0, t0, ctx->mem_idx, MO_TESL |
                                 ctx->default_tcg_memop_mask);
@@ -2551,7 +2565,7 @@ static void gen_flt_ldst (DisasContext *ctx, uint32_t opc, int ft,
         break;
     case OPC_SWC1:
         {
-            log_instruction("SWC1"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SWC1", base, offset);
             TCGv_i32 fp0 = tcg_temp_new_i32();
             gen_load_fpr32(ctx, fp0, ft);
             tcg_gen_qemu_st_i32(fp0, t0, ctx->mem_idx, MO_TEUL |
@@ -2561,7 +2575,7 @@ static void gen_flt_ldst (DisasContext *ctx, uint32_t opc, int ft,
         break;
     case OPC_LDC1:
         {
-            log_instruction("LDC1"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("LDC1", base, offset);
             TCGv_i64 fp0 = tcg_temp_new_i64();
             tcg_gen_qemu_ld_i64(fp0, t0, ctx->mem_idx, MO_TEQ |
                                 ctx->default_tcg_memop_mask);
@@ -2571,7 +2585,7 @@ static void gen_flt_ldst (DisasContext *ctx, uint32_t opc, int ft,
         break;
     case OPC_SDC1:
         {
-            log_instruction("SDC1"); //Запись инструкции в лог-файл
+        	log_ldst_instruction("SDC1", base, offset);
             TCGv_i64 fp0 = tcg_temp_new_i64();
             gen_load_fpr64(ctx, fp0, ft);
             tcg_gen_qemu_st_i64(fp0, t0, ctx->mem_idx, MO_TEQ |
