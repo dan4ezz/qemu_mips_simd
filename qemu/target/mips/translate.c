@@ -1421,6 +1421,16 @@ void log_ldst_instruction(const char* instr_name, int base, int16_t offset)
 #endif
 }
 
+void log_msa_ldst_instruction(const char* instr_name, int base, int16_t offset)
+{
+#ifdef MSA_LOG
+    FILE* log_file = fopen("log_msa", "a");
+    if(log_file != 0)
+    	fprintf(log_file, "%s    0x%lx\n", instr_name, (uint64_t)cpu_gpr[base]+offset);
+    fclose(log_file);
+#endif
+}
+
 
 #include "exec/gen-icount.h"
 
@@ -20249,35 +20259,35 @@ static void gen_msa(CPUMIPSState *env, DisasContext *ctx)
 
             switch (MASK_MSA_MINOR(opcode)) {
             case OPC_LD_B:
-        		log_msa_instruction("MSA_LD_B");
+        		log_msa_ldst_instruction("MSA_LD_B", rs, s10 << df);
                 gen_helper_msa_ld_b(cpu_env, twd, taddr);
                 break;
             case OPC_LD_H:
-        		log_msa_instruction("MSA_LD_H");
+        		log_msa_ldst_instruction("MSA_LD_H", rs, s10 << df);
                 gen_helper_msa_ld_h(cpu_env, twd, taddr);
                 break;
             case OPC_LD_W:
-        		log_msa_instruction("MSA_LD_W");
+        		log_msa_ldst_instruction("MSA_LD_W", rs, s10 << df);
                 gen_helper_msa_ld_w(cpu_env, twd, taddr);
                 break;
             case OPC_LD_D:
-        		log_msa_instruction("MSA_LD_D");
+        		log_msa_ldst_instruction("MSA_LD_D", rs, s10 << df);
                 gen_helper_msa_ld_d(cpu_env, twd, taddr);
                 break;
             case OPC_ST_B:
-        		log_msa_instruction("MSA_ST_B");
+        		log_msa_ldst_instruction("MSA_ST_B", rs, s10 << df);
                 gen_helper_msa_st_b(cpu_env, twd, taddr);
                 break;
             case OPC_ST_H:
-        		log_msa_instruction("MSA_ST_H");
+        		log_msa_ldst_instruction("MSA_ST_H", rs, s10 << df);
         		gen_helper_msa_st_h(cpu_env, twd, taddr);
                 break;
             case OPC_ST_W:
-        		log_msa_instruction("MSA_ST_W");
+        		log_msa_ldst_instruction("MSA_ST_W", rs, s10 << df);
                 gen_helper_msa_st_w(cpu_env, twd, taddr);
                 break;
             case OPC_ST_D:
-        		log_msa_instruction("MSA_ST_D");
+        		log_msa_ldst_instruction("MSA_ST_D", rs, s10 << df);
                 gen_helper_msa_st_d(cpu_env, twd, taddr);
                 break;
             }
