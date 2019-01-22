@@ -41,7 +41,6 @@ void print_vector_arr(v4i32* vecs, v4i32 idx)
 
 int main(int argc, char** argv) {
 
-    /*
     int8_t in[16] = { 9, 0, -5, 3, 0, 0, -1, 0, 1, 0, 0, 0, 0, 0, 0, 0 };
     uint8_t out[256];
     
@@ -69,14 +68,7 @@ int main(int argc, char** argv) {
 
     v4i32 msa_ret = msa_cabac_i32(msa_in, msa_out);
     print_vector_arr(msa_out, msa_ret);
-    */
-    v2i64 a = { 3, 4};
-    v2i64 b = { 4, 6};
-    b = (v2i64){6, 7};
-    b = (v2i64){5, 5};
-    a = (v2i64){-1, -1};
-    b = (v2i64){3, 3};
-    a = (v2i64){2, 2};
+
     return 0;
 }
 
