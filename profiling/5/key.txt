@@ -1,0 +1,1 @@
+-EL -mabi=64 -march=i6400 -mgp64 -mmsa -O0 -static

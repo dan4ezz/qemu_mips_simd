@@ -1,0 +1,1 @@
+-EL -mabi=64 -march=i6500 -mfp64 -mno-local-sdata -mmsa -O0 -static
