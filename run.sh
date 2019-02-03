@@ -30,7 +30,7 @@ run_alg() {
 	$cur_directory/qemu/mips64el-linux-user/qemu-mips64el -cpu I6400 a.out >> /dev/null
 }
 # counter of keys
-counter=0
+counter=25
 
 # main loop: reading file containing keys for compiler
 # keys are being written to $keys 
@@ -43,6 +43,7 @@ while IFS='' read -r keys || [[ -n "$keys" ]]; do
 	for i_path in ${!paths[*]}
 	do
 		echo "${paths[$i_path]}"
+		mkdir -p $cur_directory/profiling/"$counter"/"${paths[$i_path]}"_metrics
 		for file in $(ls "${paths[$i_path]}" | grep -E "\.[c,p]{1,3}$")
 		do
 			echo $file
@@ -51,7 +52,9 @@ while IFS='' read -r keys || [[ -n "$keys" ]]; do
 			mv log_msa "${paths[$i_path]}"_log_msa
 			mv "${paths[$i_path]}"_log_msa $cur_directory/profiling/"$counter"
 			rm -f a.out
+			cp main_cnt $cur_directory/profiling/"$counter"/"${paths[$i_path]}"_metrics/
 			cd ..
 		done
+		python3 $cur_directory/Python_parser/parser_v2.py $cur_directory/profiling/"$counter"/"${paths[$i_path]}"_log_msa $cur_directory/profiling/"$counter" "${paths[$i_path]}"_metrics
 	done
 done < "$param_file"
