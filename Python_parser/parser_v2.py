@@ -9,20 +9,20 @@ if len(sys.argv) == 1:
     path_to_log = './log_msa'
     path_to_metrics = './metrics'
 elif len(sys.argv) == 2:
-    path_to_log = sys.argv[1] + '/log_msa'
+    path_to_log = sys.argv[1]
     path_to_metrics = './metrics'
 elif len(sys.argv) == 3:
-    path_to_log = sys.argv[1] + '/log_msa'
+    path_to_log = sys.argv[1]
     path_to_metrics = sys.argv[2]    
     path_to_metrics += '/metrics'
 elif len(sys.argv) == 4:
-    path_to_log = sys.argv[1] + '/log_msa'
+    path_to_log = sys.argv[1]
     name_of_metrics_folder = sys.argv[3]
     path_to_metrics = sys.argv[2]
     path_to_metrics += '/'   
     path_to_metrics += name_of_metrics_folder
 elif len(sys.argv) == 5:
-    path_to_log = sys.argv[1] + '/log_msa'
+    path_to_log = sys.argv[1]
     name_of_metrics_folder = sys.argv[3]
     path_to_metrics = sys.argv[2]
     path_to_metrics += '/'   
@@ -141,7 +141,8 @@ else:
         acc_msaldst += v
     for k, v in common.items():
         acc_common += v
-    out.write('Среднее число векторных операций на один доступ к данным: ' + str((acc_msa)/(acc_msaldst)))
+    if acc_msaldst != 0:
+        out.write('Среднее число векторных операций на один доступ к данным: ' + str((acc_msa)/(acc_msaldst)))
     out.close()
     
     out = open(path_to_metrics + '/time_localization_metric', 'w')
