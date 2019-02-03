@@ -34,7 +34,6 @@ if only_main == True:
 else:
     file = open(path_to_metrics + '/main_cnt', 'r')
     main_cnt = int(file.readline())
-
     
 if not os.path.exists(path_to_metrics):
     os.mkdir(path_to_metrics)
@@ -114,7 +113,7 @@ for line in f.readlines():
             #Оценка векторизации
             if command not in common.keys() and command not in msa.keys() and command not in msaldst.keys():
                 if 'MSA' in line:
-                    if 'LD_H' in line or 'ST_H' in line:
+                    if 'LD' in line or 'ST' in line:
                         msaldst[command] = 1
                     elif 'MULV_df' in line or 'DIV' in line or 'SUB' in line or 'ADD' in line:          
                         msa[command] = 1
@@ -122,7 +121,7 @@ for line in f.readlines():
                     common[command] = 1
             else:
                 if 'MSA' in line:
-                    if 'LD_H' in line or 'ST_H' in line:
+                    if 'LD' in line or 'ST' in line:
                         msaldst[command] += 1
                     elif 'MULV_df' in line or 'DIV' in line or 'SUB' in line or 'ADD' in line:
                         msa[command] += 1
