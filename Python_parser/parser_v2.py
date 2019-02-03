@@ -115,7 +115,7 @@ for line in f.readlines():
                 if 'MSA' in line:
                     if 'LD' in line or 'ST' in line:
                         msaldst[command] = 1
-                    elif 'MULV_df' in line or 'DIV' in line or 'SUB' in line or 'ADD' in line:          
+                    else:         
                         msa[command] = 1
                 else:
                     common[command] = 1
@@ -123,7 +123,7 @@ for line in f.readlines():
                 if 'MSA' in line:
                     if 'LD' in line or 'ST' in line:
                         msaldst[command] += 1
-                    elif 'MULV_df' in line or 'DIV' in line or 'SUB' in line or 'ADD' in line:
+                    else:
                         msa[command] += 1
                 else:
                     common[command] += 1
