@@ -132,6 +132,8 @@ def create_metrics(path_to_log, path_to_metrics):
 
     with open(f'{path_to_metrics}/metrics/time_localization_2nd', 'w') as file:
         for k, v in time_loc_scnd.items():
+            if v[1] != 1:
+                v[0] = 1
             file.write(str(k) + ': ' + str(v[0]) + '\n')
 
 
