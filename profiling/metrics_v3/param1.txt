@@ -1,0 +1,502 @@
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mdouble-float -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mhard-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mfp64 -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mgp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mno-shared -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mabs=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mdouble-float -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mhard-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mfp64 -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mgp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
+-EL -mabi=64 -march=mips64r6 -mmsa -O1 -static -mfp64 -mhard-float -mdouble-float -mabs=2008 -mnan=2008 -mllsc -membedded-data -muninit-const-in-rodata 
