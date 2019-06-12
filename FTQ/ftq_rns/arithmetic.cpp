@@ -2,7 +2,7 @@
 #include "tools.h"
 #include "sign.h"
 #include "matrices.h"
-/*
+
 int* Arithmetic::RNSadd(int* rns1, int* rns2, int* basis, int basis_size){
     int incr_basis_size = basis_size + 1;
     int* res = new int[incr_basis_size];
@@ -47,4 +47,3 @@ Wrappers::RNSMatrix Arithmetic::RNS_mtx_mult(Wrappers::RNSMatrix a, Wrappers::RN
     }
     return res;
 }
-*/
