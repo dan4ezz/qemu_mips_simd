@@ -1408,7 +1408,6 @@ static TCGv_i32 fpu_fcr0, fpu_fcr31;
 static TCGv_i64 fpu_f64[32];
 static TCGv_i64 msa_wr_d[64];
 
-
 void log_ldst_instruction(const char* instr_name, int base, int16_t offset)
 {
 #ifdef USUAL_OPCS
@@ -1425,8 +1424,9 @@ void log_msa_ldst_instruction(const char* instr_name, int base, int16_t offset)
 {
 #ifdef MSA_LOG
     FILE* log_file = fopen("log_msa", "a");
-    if(log_file != 0)
+    if(log_file != 0) {
     	fprintf(log_file, "%s    0x%lx\n", instr_name, (uint64_t)cpu_gpr[base]+offset);
+    }
     fclose(log_file);
 #endif
 }
@@ -2295,7 +2295,7 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         mem_idx = MIPS_HFLAG_UM;
         /* fall through */
     case OPC_LW:
-    	if(mem_idx == MIPS_HFLAG_UM)
+    	if(opc == OPC_LWE)
     		log_ldst_instruction("LWE", base, offset); //Запись инструкции в лог-файл
     	else
     		log_ldst_instruction("LW", base, offset); //Запись инструкции в лог-файл
@@ -2307,7 +2307,7 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         mem_idx = MIPS_HFLAG_UM;
         /* fall through */
     case OPC_LH:
-    	if(mem_idx == MIPS_HFLAG_UM)
+    	if(opc == OPC_LHE)
     		log_ldst_instruction("LHE", base, offset); //Запись инструкции в лог-файл
     	else
     		log_ldst_instruction("LH", base, offset); //Запись инструкции в лог-файл
@@ -2319,7 +2319,7 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         mem_idx = MIPS_HFLAG_UM;
         /* fall through */
     case OPC_LHU:
-    	if(mem_idx == MIPS_HFLAG_UM)
+    	if(opc == OPC_LHUE)
     		log_ldst_instruction("LHUE", base, offset);
     	else
     		log_ldst_instruction("LHU", base, offset); //Запись инструкции в лог-файл
@@ -2331,7 +2331,7 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         mem_idx = MIPS_HFLAG_UM;
         /* fall through */
     case OPC_LB:
-    	if(mem_idx == MIPS_HFLAG_UM)
+    	if(opc == OPC_LBE)
     		log_ldst_instruction("LBE", base, offset);
     	else
     		log_ldst_instruction("LB", base, offset);
@@ -2342,7 +2342,7 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         mem_idx = MIPS_HFLAG_UM;
         /* fall through */
     case OPC_LBU:
-    	if(mem_idx == MIPS_HFLAG_UM)
+    	if(opc == OPC_LBUE)
     		log_ldst_instruction("LBUE", base, offset);
     	else
     		log_ldst_instruction("LBU", base, offset);
@@ -2353,7 +2353,7 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         mem_idx = MIPS_HFLAG_UM;
         /* fall through */
     case OPC_LWL:
-    	if(mem_idx == MIPS_HFLAG_UM)
+    	if(opc == OPC_LWLE)
     		log_ldst_instruction("LWLE", base, offset);
     	else
     		log_ldst_instruction("LWL", base, offset);
@@ -2383,7 +2383,7 @@ static void gen_ld(DisasContext *ctx, uint32_t opc,
         mem_idx = MIPS_HFLAG_UM;
         /* fall through */
     case OPC_LWR:
-    	if(mem_idx == MIPS_HFLAG_UM)
+    	if(opc == OPC_LWRE)
     		log_ldst_instruction("LWRE", base, offset);
     	else
     		log_ldst_instruction("LWR", base, offset);
